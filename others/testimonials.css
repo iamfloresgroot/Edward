@@ -19,32 +19,65 @@ body {
   align-items: start;
   min-height: 100vh;
 }
+
+
+  
+  .grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+      
+  }
+  
+  main img{
+      height: 250px;
+      width: 250px;
+      margin-left: 100px;
+      padding: 25px;
+  }
+  
+  
+  main p{
+      font-size: 0.9rem;
+      padding: 25px;
+      margin-top: 12px;
+      color: black;
+      font-family: 'Calibri';
+  }
+  
+
+
 a {
   text-decoration: none;
   color: #fff;
 }
 #header {
-  background: #08c2ca;
+  background: #08C2CA;
   width: 100%;
   position: relative;
   text-align: center;
 }
+
+/*THIS ADD SPACING IN THE HEADER*/
 #header:after {
   content: "";
   clear: both;
   display: block;
 }
+
+/*THIS IS MY LOGO*/
 .logo {
   width: 125px;
   height: 125px;
   border-radius: 60px;
 }
 
-.logo-contenedor {
+/*THIS FLOATS MY LOGO TO THE LEFT*/
+.logo-contenedor{
   float: left;
   padding-left: 20px;
 }
 
+/*THIS IS MY NAVIGATION BAR*/
 nav {
   float: right;
 }
@@ -91,6 +124,7 @@ nav li li a:hover {
   background: #fafbfb;
 }
 
+/*THIS IS MY MENUS*/
 #menu-icon {
   position: absolute;
   right: 0;
@@ -110,43 +144,61 @@ nav li li a:hover {
 
 /* Main */
 
-main {
-  text-align: justify;
-  justify-content: center;
+.module-block {
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: 1fr 2fr 2fr;
+	background-color: #fff;
+	margin: 0 0 70px 0;
+	padding: 40px 105px;
+  color: #333;
+  font-family: 'Gilroy';
 }
 
-main p {
-  font-family: "Gilroy";
-  justify-content: center;
-  margin: 0px 250px 0px 250px;
+
+/*THIS IS MY QUIZ BUTTON*/
+.buton-quiz{
+  background-color: #ff4603;
+  font-size: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
 }
 
-main h3 {
-  font-family: "Gilroy";
-  color: #000000;
-  text-align: center;
+.buton-quiz:hover{
+  background-color: #af370b;
 }
 
-.title {
-  margin-top: 5px;
-  font-family: "Gilroy";
-  font-size: 55px;
-  align-items: center;
-  text-align: center;
-  color: #000000;
+.right {
+	width: 240px;
+  height: 300px;
 }
 
-.subtitle {
-  font-family: "Gilroy";
-  margin-top: 0px;
-  color: #000000;
-  text-align: center;
+.rectangule{
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 0.5fr 2fr 0.5fr;
+  background-color: #ff4603;
+  height: 240px;
+  margin: -110px 0px 200px 0px;
+  padding: 30px 150px;
 }
 
-main p {
-  font-family: "Gilroy";
-  color: #000000;
+.slogan{
+  color: #811320;
+  font-family: 'Gilroy';
+  font-weight: bold;
+  font-size: 30px;
+  height: 200px;
 }
+
+.description{
+  font-size: 12px;
+}
+
+
+
 
 /* Footer */
 
@@ -168,8 +220,6 @@ footer {
   flex-direction: column;
   align-items: flex-start;
   text-align: center;
-
-
 }
 
 footer h3 {
@@ -178,7 +228,7 @@ footer h3 {
   font-size: 18px;
 }
 
-.title-f {
+.title-f{
   padding: 0 35px;
 }
 
@@ -195,10 +245,11 @@ footer li {
 footer a {
   color: #333;
   text-decoration: none;
+  
 }
 
-footer a:hover {
-  color: #c94a1c;
+footer a:hover{
+  color:#c94a1c;
 }
 
 footer form {
@@ -224,39 +275,35 @@ footer button[type="submit"] {
   transition: all 0.2s;
 }
 
-footer button[type="submit"]:hover {
+footer button[type="submit"]:hover{
   background-color: #af370b;
 }
 
-footer img {
+footer img{
   width: 125px;
   height: 125px;
   border-radius: 60px;
 }
 
 form .correo:valid {
-  background: #fff;
-  border: none;
+	background: #fff;
+	border: none;
 }
 
 form .correo:invalid {
-  background: #dfa9a9;
-  border: none;
-}
-
-.c {
-  color: #fff;
+	background: #dfa9a9;
+	border: none;
 }
 
 
-.social i {
+.social i{
   color: #fff;
   padding: 12px;
   font-size: 1.5rem;
   transition: all 0.2s;
 }
 
-.social i:hover {
+.social i:hover{
   color: #4c4c4c;
   font-size: 1.5rem;
 }
@@ -267,17 +314,22 @@ form .correo:invalid {
   margin-top: 20px;
 }
 
+
+/*THIS IS FOR MY RESPONSIVE SITE*/
 @media only screen and (max-width: 767px) {
   .footer-container {
     grid-template-columns: 1fr;
   }
-
+  
   .copy {
     grid-column: 1 / 1;
   }
 }
 
-/* Zona Media query */
+
+
+
+/* Zone Media query */
 @media screen and (min-width: 24.375em) {
   .legal .legal__links {
     margin-left: auto;
@@ -288,15 +340,17 @@ form .correo:invalid {
   .footer__nav > * {
     flex: 1;
   }
-
+  
   .footer__add {
     flex: 1 0px;
   }
-
+  
   .footer__nav {
     flex: 2 0px;
   }
 }
+
+
 
 @media only screen and (max-width: 1170px) {
   nav > ul > li > a {
@@ -375,34 +429,7 @@ form .correo:invalid {
   #header nav ul li li a:before {
     content: "- ";
   }
-}
-@media only screen and (min-width: 351px) and (min-height: 801px) {
-  main p{
-    margin: 0 100px;
-    font-size: 12px;
-  }
-  header {
+  .mega-col {
     width: 100%;
   }
-  .logo{
-    width: 40px;
-    height: 40px;
-    
-  }
-  .footer-container {
-    max-width: 390px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 40px;
-  }
-
-  .lg{
-  margin-left: 150px;
-  }
-
-.social i{
-  font-size: 19px;
-}
-
 }

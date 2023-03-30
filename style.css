@@ -359,6 +359,14 @@ form .correo:invalid {
 
 
 /*THIS IS FOR MY RESPONSIVE SITE*/
+
+
+
+
+
+
+
+
 @media only screen and (max-width: 767px) {
   .footer-container {
     grid-template-columns: 1fr;
